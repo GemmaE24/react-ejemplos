@@ -1,43 +1,99 @@
-import { NavLink } from 'react-router-dom';
-/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons'
+
+/* import { faFacebook, faInstagram, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import ammec from '../imagenes/logo_ammec.png'; */
-import "./Estilos.css";
-import articulada from "../imagenes/articulada.png";
-import tijera from "../imagenes/tijera.png";
-import Unipersonal from '../imagenes/unipersonal.png';
-import telescopicas from '../imagenes/telescopica.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from 'react-router-dom'; */
+import './estilos.css';
+import ammec from '../imagenes/logo_ammec.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
+
+
+
 export default function Menu() {
-  const claseActiva = "active";
+  const claseActiva = "active"
   return (
-    <div>
-      <div className="row">
-        <div className="col-4">iconos</div>
-        <div className="col-4">logo</div>
-        <div className="col-4">iconos</div>
-      </div>
+    <div className='colores'>
+      <nav className='nav_logo'>
+        <div className='item_1'>
+          <a href="https://www.facebook.com/AMMECmx/" target="blank">
+            <FontAwesomeIcon icon={faFacebookF} className="iconos" />
+          </a>{"    "}
+          <a href="https://www.instagram.com/ammec/" target="blank">
+            <FontAwesomeIcon icon={faInstagram} className="iconos" />
+          </a>{"   "}
+          <a href="https://twitter.com/AMMEC_Rentas" target="blank">
+            <FontAwesomeIcon icon={faTwitter} className="iconos" />
+          </a>{"   "}
+        </div>
+        <div className='img_logo' >
+          <img src={ammec} alt="Logo " className='logo' />
+        </div>
 
-      <nav className="nav navbar-nav navbar-center me-auto mb-2 mb-lg-0 bg-dark">
-        <div className="row">
+        <div className='item_2'>
 
-          <li className="nav-item" >
-            <div className="dropdown" >
-              <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
-                to="/ Ventas/Ventas">
-                VENTA
-              </NavLink>
-              <div className="dropdown-content" >
-                <div className="row">
-                  <div className="col"><a href="#"><img src={telescopicas} alt=" " className='plataforma1' />Plataformas Telescópicas</a></div>
-                  <div className="col"> <a href="#"><img src={articulada} alt=" " className='plataforma2' />Plataformas Articuladas</a></div>
-                  <div className="col"><a href="#"><img src={tijera} alt=" " className='plataforma3' />Plataforma de Tijera </a></div>
-                  <div className="col"><a href="#"><img src={Unipersonal} alt=" " className='plataforma4' />Plataforma Unipersonal</a></div></div>
-              </div>
-              </div>
-              </li>
-            </div>
-          </nav>
-          </div>
-        )
+          <a href="https://www.youtube.com/channel/UClbxnoqIEdus4v98hMgXu3w/featured" target="blank">
+            <FontAwesomeIcon icon={faYoutube} className="iconos" />
+          </a>{" "}
+          <a href="https://web.whatsapp.com/" target="blank">
+            <FontAwesomeIcon icon={faWhatsapp} className="iconos" />
+          </a>{" "}
+          <FontAwesomeIcon icon={faUser} className="iconos" />{" "}
+        </div>
+      </nav>
+      <nav className='nav_principal'>
+        <ul className='menu-item'>
+        <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Inicio/Inicio">
+              INICIO
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Venta/Venta">
+              VENTA
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Renta/Renta">
+              RENTA
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Cursos/Cursos">
+              CURSOS
+            </NavLink>
+          </li><li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Certificaiones/Certificaiones">
+              CERTIFICACIONES
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Soporte/Soporte">
+              SOPORTE
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Proyectos/Proyectos">
+              PROYECTOS
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className='nav-link, claseActiva' activeClassName={claseActiva}
+              to="/Contacto/ Contacto">
+              CONTACTO
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  )
 }

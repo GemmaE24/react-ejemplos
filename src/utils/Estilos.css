@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body{
+  font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/*Estilos para el logo*/
+.nav_logo{
+  background-color:#000;
+  height: 72px;
+  display:flex;
+  color:rgb(252, 252, 252);
+  align-items:center;/* CENTA LA IMAGEN  */
+  padding: 0px 15px;
+}
+
+img{
+  width: auto;
+  height: 120px;
+}
+
+.img_logo{
+  width:100%;
+  height: 100%;
+  object-fit:contain;/* Adapta la imagen al contenedor */
+  flex-basis: 900px;/* cresera solo si tiene el espacio */
+  display:flex;
+  align-items:center;
+  text-align: center;
+ justify-content: center/* centra el contenedor de la imagen */
+}
+
+.img_logo:hover{
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.item_1{
+ flex-basis: 800px;
+}
+
+.item_2{
+  flex-basis: 800px;
+ text-align: end;
+}
+
+/*iconos*/
+.iconos{
+  color:#fff;
+ font-size: 1.8em;
+ flex-basis: 100px;
+ padding: 3%;
+}
+
+.iconos:hover {
+  color: #ff5100;
+  transition: .5s;
+  transform: scale(1.2);
+  filter:drop-shadow(0px 0px 13px #ff6b00)
+}
+
+/*nav principal*/
+.nav_principal{
+  width: 100%;
+  background-color:rgb(0, 0, 0);
+  min-height: 56px;
+  display:flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.menu-item{
+  display:flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  font-weight:600;
+  letter-spacing: 0.8px;
+}
+
+.claseActiva{
+  color:rgb(255, 255, 255);
+}
+
+.claseActiva:hover{
+  text-decoration: none !important;
+ color:rgb(255, 255, 255);
+}
+
+.nav-item{
+  padding:.4rem 1rem; 
+  display:block;
+  font-size: 1rem
+}
+
+.nav-item:hover {
+  background: #ff6b00;
+  transition: 0.5s;
+  border-radius:0.3rem ;
+  padding:.4rem 1em; 
+  text-decoration: none!important;
+  color:#fff
+}
+
+
+@media screen and (max-width:885px){
+
+  .nav-item{
+  padding:.4rem .4rem; 
+  display:block;
+  font-size: 0.8rem
+  }
+
+  img{
+    width: auto;
+    height: 100px;
+    }
+}
+
+@media screen and (max-width:720px){
+  .iconos{
+    display:none;
+  }
+  
+  .menu-item{
+  display:flex;
+  display: block;
+  flex-direction: column;
+  width: 100%;
+ }
+
+ .nav-item{
+  font-size:1rem
+ }
+
+
+  img{
+  width: auto;
+  height: 80px;
+  }
+
+}
