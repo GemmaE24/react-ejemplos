@@ -1,16 +1,13 @@
 
 /* import { faFacebook, faInstagram, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { NavLink } from 'react-router-dom'; */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';*/
 import './estilos.css';
 import ammec from '../imagenes/logo_ammec.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
-
-
 
 export default function Menu() {
   const claseActiva = "active"
@@ -94,6 +91,14 @@ export default function Menu() {
           </li>
         </ul>
       </nav>
+   
+      <div className="bars__menu" >
+        <span className="line1__bars-menu"></span>
+        <span className="line2__bars-menu"></span>
+        <span className="line3__bars-menu"></span>
+      </div>
+     
+      
     </div>
   )
 }
